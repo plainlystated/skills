@@ -32,6 +32,8 @@ Use this template for writing the PR body:
 <optional: potential ramifications of merge>
 ```
 
+Below Merge Danger, append any lines the caller, the repo's instructions or the issue require in a PR body, verbatim and each on its own line: closing keywords (`Closes #123`, `Closes ClickUp #86aghyq0r`), mentions, and the like. The template never replaces them, and never add lines those instructions forbid.
+
 ## Sections
 
 Skip all preambles and keep prose brief. Use the user's domain language from `GLOSSARY.md`.

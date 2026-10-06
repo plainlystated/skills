@@ -25,3 +25,7 @@ git fetch upstream && git merge upstream/main && git push
 - Added: look up the parent spec issue's milestone (created by to-spec) and attach each ticket to it; ask before creating one if missing.
 - Issue template gains a `## Type` section (exactly `HITL` or `AFK`).
 - Every issue is labeled `HITL` or `AFK`, and HITL slices also get a `HITL: ` title prefix. `wiggum` ORs the label, prefix and `## Type` section to route a ticket to an interactive session instead of an AFK worker.
+
+### skills/engineering/pr
+
+- Template keeps caller-required lines (`Closes #N`, `Closes ClickUp #…`) appended below Merge Danger, so wiggum workers and repo PR rules aren't overridden by the three-section shape.
