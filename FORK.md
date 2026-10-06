@@ -23,4 +23,4 @@ git fetch upstream && git merge upstream/main && git push
 - Dropped the `ready-for-agent` label.
 - Added: look up the parent spec issue's milestone (created by to-spec) and attach each ticket to it; ask before creating one if missing.
 - Issue template gains a `## Type` section (exactly `HITL` or `AFK`).
-- HITL slices get a `HITL: ` title prefix — this is what `ralph-once` matches on to route the ticket to an interactive session instead of an AFK worker.
+- Every issue is labeled `HITL` or `AFK`, and HITL slices also get a `HITL: ` title prefix. `wiggum` ORs the label, prefix and `## Type` section to route a ticket to an interactive session instead of an AFK worker.

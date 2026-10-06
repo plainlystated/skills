@@ -61,7 +61,9 @@ Publish the approved tickets as GitHub issues, one per ticket, in dependency ord
 
 The parent spec issue should already be attached to a milestone (created by the to-spec skill). Look up the spec issue's milestone and attach each new issue to it. If the spec has no milestone, ask the user whether to create one.
 
-If the slice is **HITL**, prefix its title with `HITL: ` (e.g. `HITL: Pilot flip Cloudflare caching for GSS`). This is what `ralph-once` matches on to route the ticket to an interactive session instead of an AFK worker. AFK issues get no prefix.
+Label every issue `HITL` or `AFK` to match its `## Type` section, and prefix HITL titles with `HITL: ` (e.g. `HITL: Pilot flip Cloudflare caching for GSS`); AFK issues get no prefix. `wiggum` treats the label, the title prefix and the `## Type` section as ORed HITL markers, so set all three consistently: any one of them routes the ticket to a human.
+
+Leave the parent spec issue untyped — PRDs are not worked directly.
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
