@@ -21,6 +21,7 @@ git fetch upstream && git merge upstream/main && git push
 
 - Tracker hardcoded to GitHub Issues in the current repo; local-markdown publish path and its template removed.
 - Dropped the `ready-for-agent` label.
+- Each ticket becomes a sub-issue of the parent spec issue (upstream's sub-issue change, applied unconditionally).
 - Added: look up the parent spec issue's milestone (created by to-spec) and attach each ticket to it; ask before creating one if missing.
 - Issue template gains a `## Type` section (exactly `HITL` or `AFK`).
 - Every issue is labeled `HITL` or `AFK`, and HITL slices also get a `HITL: ` title prefix. `wiggum` ORs the label, prefix and `## Type` section to route a ticket to an interactive session instead of an AFK worker.
