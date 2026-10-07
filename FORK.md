@@ -29,3 +29,5 @@ git fetch upstream && git merge upstream/main && git push
 ### skills/engineering/pr
 
 - Template keeps caller-required lines (`Closes #N`, `Closes ClickUp #…`) appended below Merge Danger, so wiggum workers and repo PR rules aren't overridden by the three-section shape.
+- Optional Read Closely section (max 3 filtered items: title, file reference, description, **Why it matters**).
+- Optional Before Merge / Before Deploy / After Deploy checklists, present only when populated.
