@@ -207,7 +207,7 @@ The blast radius is the potential impact or scope of the changes introduced by t
 
 ### Interface
 
-A terse cheatsheet for whoever verifies the change: every entry point this PR adds or changes that a person can invoke directly, such as CLI commands and tasks with their arguments, routes and pages, scripts, console or REPL entry points, config keys and feature flags. One row each, with the exact invocation (every argument, and which are optional), what it does in a few words, and who can reach it where. Flag anything that writes, sends or charges, and its dry-run form if there is one. Leave out internal methods nobody calls by hand.
+A terse cheatsheet for whoever verifies the change: every entry point this PR adds or changes that a person can invoke directly, such as CLI commands and tasks with their arguments, pages and screens, scripts, console or REPL entry points, config keys and feature flags. One row each, with the exact invocation (every argument, and which are optional), what it does in a few words, and who can reach it where. Flag anything that writes, sends or charges, and its dry-run form if there is one. Name UI by where a person finds it ("Home page panel"), not by route, and fold a page reached from another row into that row. Leave out endpoints only the UI calls (HTMX fragments, JSON) and internal methods nobody calls by hand.
 
 ### Before Merge, Before Deploy, After Deploy
 
