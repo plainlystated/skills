@@ -39,6 +39,12 @@ Use this template for writing the PR body:
 
 <optional: potential ramifications of merge>
 
+## Interface
+
+| Entry point | What it does | Who / where |
+| --- | --- | --- |
+| <command with its args, or route> | <one line> | <who can reach it, which environment> |
+
 ## Before Merge
 
 - [ ] <prep or manual verification that must happen before merging>
@@ -52,7 +58,7 @@ Use this template for writing the PR body:
 - [ ] <post-deploy check or thing to watch, with where to look>
 ```
 
-Read Closely, Before Merge, Before Deploy and After Deploy are optional: include each only when it has at least one entry, and never write "None".
+Read Closely, Interface, Before Merge, Before Deploy and After Deploy are optional: include each only when it has at least one entry, and never write "None".
 
 Below the last section, append any lines the caller, the repo's instructions or the issue require in a PR body, verbatim and each on its own line: closing keywords (`Closes #123`, `Closes ClickUp #86aghyq0r`), mentions, and the like. The template never replaces them, and never add lines those instructions forbid.
 
@@ -198,6 +204,10 @@ Execution-based evidence is A-tier. Test results, console output. Show the exact
 Describe whether it's a one-way or two-way door. You can walk back through two-way doors, but not one-way doors. A PR that is cheap to roll back is lower risk. Changes that involve destructive actions or hard-to-reverse decisions are one-way doors.
 
 The blast radius is the potential impact or scope of the changes introduced by this PR. Consider all possibilities. Examples are layout shift, breakages for consumers, mobile responsiveness, etc.
+
+### Interface
+
+A terse cheatsheet for whoever verifies the change: every entry point this PR adds or changes that a person can invoke directly, such as CLI commands and tasks with their arguments, routes and pages, scripts, console or REPL entry points, config keys and feature flags. One row each, with the exact invocation (every argument, and which are optional), what it does in a few words, and who can reach it where. Flag anything that writes, sends or charges, and its dry-run form if there is one. Leave out internal methods nobody calls by hand.
 
 ### Before Merge, Before Deploy, After Deploy
 
